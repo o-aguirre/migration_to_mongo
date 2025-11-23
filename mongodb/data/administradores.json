@@ -1,0 +1,42 @@
+[
+  {
+    "numrun": 21886542,
+    "dvrun": "9",
+    "pnombre": "JUAN",
+    "snombre": "JORGE",
+    "appaterno": "PÉREZ",
+    "apmaterno": "GÓMEZ"
+  },
+  {
+    "numrun": 21817386,
+    "dvrun": "1",
+    "pnombre": "MARÍA",
+    "snombre": null,
+    "appaterno": "ÁLVAREZ",
+    "apmaterno": "HENRÍQUEZ"
+  },
+  {
+    "numrun": 15018444,
+    "dvrun": "4",
+    "pnombre": "FELIPE",
+    "snombre": "JOSE",
+    "appaterno": "CONTRERAS",
+    "apmaterno": "MARAMBIO"
+  },
+  {
+    "numrun": 17702522,
+    "dvrun": "4",
+    "pnombre": "EUGENIA",
+    "snombre": "PAULA",
+    "appaterno": "BENAVIDES",
+    "apmaterno": "LÓPEZ"
+  },
+  {
+    "numrun": 13254987,
+    "dvrun": "K",
+    "pnombre": "JUAN",
+    "snombre": null,
+    "appaterno": "FUENTES",
+    "apmaterno": "POBLETE"
+  }
+]

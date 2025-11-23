@@ -1,0 +1,36 @@
+Consulta 1
+
+db.administradores.find({ numrun: 15018444 })
+
+Consulta 2
+db.edificios.distinct('comuna', { 'comuna.id_comuna_sql': 10 })
+
+Consulta 3
+db.gastos_comunes.aggregate([
+  {
+    $lookup: {
+      from: 'edificios',
+      localField: 'edificio_id',
+      foreignField: '_id',
+      as: 'edificio'
+    }
+  },
+  {
+    $unwind: '$edificio'
+  },
+  {
+    $match: {
+      'edificio.nombre': 'Murano',
+      monto_total: { $gt: 85000 }
+    }
+  },
+  {
+    $project: {
+      _id: 0,
+      anno_mes: '$anno_mes',
+      nro_depto: '$nro_depto',
+      monto_total: '$monto_total',
+      nombre_edificio: '$edificio.nombre'
+    }
+  }
+])

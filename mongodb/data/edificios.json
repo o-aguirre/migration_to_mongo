@@ -1,0 +1,98 @@
+[
+  {
+    "id_edificio_sql": 10,
+    "nombre": "Murano",
+    "direccion": "Los Militares 4743",
+    "numrun_administrador": 21886542,
+    "comuna": {
+      "nombre": "Las Condes",
+      "id_comuna_sql": 10
+    },
+    "departamentos": [
+      {
+        "nro_depto": 21,
+        "total_banos": 3,
+        "total_dormitorios": 4,
+        "total_balcones": 3,
+        "metros_cuadrados": 400,
+        "porc_prorrateo": 4.15
+      },
+      {
+        "nro_depto": 22,
+        "total_banos": 1,
+        "total_dormitorios": 1,
+        "total_balcones": 2,
+        "metros_cuadrados": 80,
+        "porc_prorrateo": 0.95
+      },
+      {
+        "nro_depto": 23,
+        "total_banos": 2,
+        "total_dormitorios": 3,
+        "total_balcones": 2,
+        "metros_cuadrados": 200,
+        "porc_prorrateo": 2.15
+      },
+      {
+        "nro_depto": 31,
+        "total_banos": 3,
+        "total_dormitorios": 4,
+        "total_balcones": 3,
+        "metros_cuadrados": 400,
+        "porc_prorrateo": 4.15
+      },
+      {
+        "nro_depto": 32,
+        "total_banos": 1,
+        "total_dormitorios": 1,
+        "total_balcones": 2,
+        "metros_cuadrados": 80,
+        "porc_prorrateo": 0.95
+      }
+    ]
+  },
+  {
+    "id_edificio_sql": 20,
+    "nombre": "La Fontana",
+    "direccion": "Cristóbal Colón 3663",
+    "numrun_administrador": 21886542,
+    "comuna": {
+      "nombre": "Las Condes",
+      "id_comuna_sql": 10
+    },
+    "departamentos": []
+  },
+  {
+    "id_edificio_sql": 30,
+    "nombre": "María Luisa Santander",
+    "direccion": "Bernarda Morin 467",
+    "numrun_administrador": 21817386,
+    "comuna": {
+      "nombre": "Providencia",
+      "id_comuna_sql": 20
+    },
+    "departamentos": []
+  },
+  {
+    "id_edificio_sql": 40,
+    "nombre": "Bilbao Blanco",
+    "direccion": "Elena Blanco 1162",
+    "numrun_administrador": 21817386,
+    "comuna": {
+      "nombre": "Providencia",
+      "id_comuna_sql": 20
+    },
+    "departamentos": []
+  },
+  {
+    "id_edificio_sql": 50,
+    "nombre": "Plaza El Roble",
+    "direccion": "Camino El Roble 1550",
+    "numrun_administrador": 15018444,
+    "comuna": {
+      "nombre": "Santiago",
+      "id_comuna_sql": 230
+    },
+    "departamentos": []
+  }
+]
