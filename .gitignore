@@ -1,0 +1,35 @@
+# Node modules
+node_modules/
+npm-debug.log
+package-lock.json
+
+# Variables de entorno (IMPORTANTE: NO SUBIR CREDENCIALES)
+.env
+.env.local
+.env.*.local
+
+# Archivos temporales
+*.tmp
+*.temp
+*.log
+
+# Resultados de consultas
+mongodb/output/
+mongodb/resultados/
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*.suo
+*.user
+
+# Backups
+*.bak
+*.backup
