@@ -23,20 +23,20 @@ async function poblarDesdeJSON() {
         if (!collectionNames.includes('administradores') || 
             !collectionNames.includes('edificios') || 
             !collectionNames.includes('gastos_comunes')) {
-            console.error('❌ Las colecciones no existen. Ejecuta primero: node crear_colecciones.js');
+            console.error('Las colecciones no existen. Ejecuta primero: node crear_colecciones.js');
             return;
         }
 
         // Limpiar datos existentes
-        console.log('🗑️  Limpiando datos existentes...');
+        console.log('Limpiando datos existentes...');
         await db.collection('gastos_comunes').deleteMany({});
         await db.collection('edificios').deleteMany({});
         await db.collection('administradores').deleteMany({});
-        console.log('✅ Colecciones limpiadas.\n');
+        console.log('Colecciones limpiadas.\n');
 
         // --- 1. ADMINISTRADORES ---
         console.log('═══════════════════════════════════════');
-        console.log('👤 POBLANDO ADMINISTRADORES');
+        console.log('POBLANDO ADMINISTRADORES');
         console.log('═══════════════════════════════════════');
         
         const administradoresData = JSON.parse(
@@ -50,11 +50,11 @@ async function poblarDesdeJSON() {
             adminMap.set(admin.numrun, result.insertedId);
             console.log(`✓ ${admin.pnombre} ${admin.appaterno} (RUN: ${admin.numrun})`);
         }
-        console.log(`\n📊 Total: ${administradoresData.length} administradores\n`);
+        console.log(`\nTotal: ${administradoresData.length} administradores\n`);
 
         // --- 2. EDIFICIOS ---
         console.log('═══════════════════════════════════════');
-        console.log('🏢 POBLANDO EDIFICIOS');
+        console.log('POBLANDO EDIFICIOS');
         console.log('═══════════════════════════════════════');
         
         const edificiosData = JSON.parse(
@@ -67,7 +67,7 @@ async function poblarDesdeJSON() {
             const adminObjectId = adminMap.get(edificio.numrun_administrador);
             
             if (!adminObjectId) {
-                console.error(`❌ Administrador no encontrado: RUN ${edificio.numrun_administrador}`);
+                console.error(`Administrador no encontrado: RUN ${edificio.numrun_administrador}`);
                 continue;
             }
             
@@ -87,10 +87,10 @@ async function poblarDesdeJSON() {
             console.log(`  → MongoDB _id: ${result.insertedId}`);
             console.log(`  → Departamentos: ${edificio.departamentos.length}`);
         }
-        console.log(`\n📊 Total: ${edificiosData.length} edificios\n`);
+        console.log(`\nTotal: ${edificiosData.length} edificios\n`);
 
         // Verificar mapeo
-        console.log('🔍 Mapeo de Edificios (id_edificio_sql → ObjectId):');
+        console.log('Mapeo de Edificios (id_edificio_sql → ObjectId):');
         for (const [sqlId, mongoId] of edificioMap.entries()) {
             console.log(`  ${sqlId} → ${mongoId}`);
         }
@@ -98,14 +98,14 @@ async function poblarDesdeJSON() {
 
         // --- 3. GASTOS COMUNES ---
         console.log('═══════════════════════════════════════');
-        console.log('💰 POBLANDO GASTOS COMUNES');
+        console.log('POBLANDO GASTOS COMUNES');
         console.log('═══════════════════════════════════════');
         
         const gastosData = JSON.parse(
             fs.readFileSync(path.join(__dirname, 'data', 'gastos_comunes.json'), 'utf8')
         );
         
-        console.log(`📄 Registros a insertar: ${gastosData.length}\n`);
+        console.log(`Registros a insertar: ${gastosData.length}\n`);
 
         let insertados = 0;
         let errores = 0;
@@ -114,7 +114,7 @@ async function poblarDesdeJSON() {
             const edificioObjectId = edificioMap.get(gasto.id_edificio_sql);
             
             if (!edificioObjectId) {
-                console.error(`❌ Edificio no encontrado: ID SQL ${gasto.id_edificio_sql}`);
+                console.error(`Edificio no encontrado: ID SQL ${gasto.id_edificio_sql}`);
                 console.error(`   Depto: ${gasto.nro_depto}, Período: ${gasto.anno_mes}`);
                 errores++;
                 continue;
@@ -144,16 +144,16 @@ async function poblarDesdeJSON() {
                 insertados++;
                 console.log(`✓ Depto ${gasto.nro_depto} | $${gasto.monto_total.toLocaleString()} | Edificio: ${edificioObjectId}`);
             } catch (err) {
-                console.error(`❌ Error insertando gasto: ${err.message}`);
+                console.error(`Error insertando gasto: ${err.message}`);
                 errores++;
             }
         }
         
-        console.log(`\n📊 Insertados: ${insertados} | Errores: ${errores}\n`);
+        console.log(`\nInsertados: ${insertados} | Errores: ${errores}\n`);
 
         // --- VERIFICACIÓN DE RELACIONES ---
         console.log('═══════════════════════════════════════');
-        console.log('✅ VERIFICANDO RELACIONES');
+        console.log('VERIFICANDO RELACIONES');
         console.log('═══════════════════════════════════════');
         
         const gastosConEdificio = await db.collection('gastos_comunes').aggregate([
@@ -179,8 +179,8 @@ async function poblarDesdeJSON() {
         const relacionesValidas = gastosConEdificio.filter(g => g.tiene_relacion);
         const relacionesInvalidas = gastosConEdificio.filter(g => !g.tiene_relacion);
 
-        console.log(`\n✅ Relaciones válidas: ${relacionesValidas.length}`);
-        console.log(`❌ Relaciones inválidas: ${relacionesInvalidas.length}\n`);
+        console.log(`\nRelaciones válidas: ${relacionesValidas.length}`);
+        console.log(`Relaciones inválidas: ${relacionesInvalidas.length}\n`);
 
         if (relacionesValidas.length > 0) {
             console.log('Ejemplos de relaciones correctas:');
@@ -191,7 +191,7 @@ async function poblarDesdeJSON() {
 
         // --- RESUMEN FINAL ---
         console.log('\n═══════════════════════════════════════');
-        console.log('📊 RESUMEN FINAL');
+        console.log('RESUMEN FINAL');
         console.log('═══════════════════════════════════════');
         
         const adminCount = await db.collection('administradores').countDocuments();
@@ -204,19 +204,19 @@ async function poblarDesdeJSON() {
         console.log(`Relaciones Válidas: ${relacionesValidas.length}/${gastosCount}`);
         
         if (relacionesValidas.length === gastosCount && gastosCount > 0) {
-            console.log('\n🎉 ¡ÉXITO TOTAL! Todas las relaciones son válidas.');
+            console.log('\n¡ÉXITO TOTAL! Todas las relaciones son válidas.');
         } else {
-            console.log('\n⚠️  Hay problemas. Ejecuta: node verificar_datos.js');
+            console.log('\nHay problemas. Ejecuta: node verificar_datos.js');
         }
         
         console.log('═══════════════════════════════════════\n');
 
     } catch (err) {
-        console.error('\n❌ Error fatal:', err.message);
+        console.error('\nError fatal:', err.message);
         console.error('Stack:', err.stack);
     } finally {
         await mongoClient.close();
-        console.log('🔌 Conexión cerrada.\n');
+        console.log('Conexión cerrada.\n');
     }
 }
 

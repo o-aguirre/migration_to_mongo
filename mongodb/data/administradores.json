@@ -4,16 +4,16 @@
     "dvrun": "9",
     "pnombre": "JUAN",
     "snombre": "JORGE",
-    "appaterno": "PÉREZ",
-    "apmaterno": "GÓMEZ"
+    "appaterno": "PEREZ",
+    "apmaterno": "GOMEZ"
   },
   {
     "numrun": 21817386,
     "dvrun": "1",
-    "pnombre": "MARÍA",
-    "snombre": null,
-    "appaterno": "ÁLVAREZ",
-    "apmaterno": "HENRÍQUEZ"
+    "pnombre": "MARIA",
+    "snombre": "IGNACIA",
+    "appaterno": "ALVAREZ",
+    "apmaterno": "HENRIQUEZ"
   },
   {
     "numrun": 15018444,
@@ -29,13 +29,13 @@
     "pnombre": "EUGENIA",
     "snombre": "PAULA",
     "appaterno": "BENAVIDES",
-    "apmaterno": "LÓPEZ"
+    "apmaterno": "LOPEZ"
   },
   {
     "numrun": 13254987,
     "dvrun": "K",
     "pnombre": "JUAN",
-    "snombre": null,
+    "snombre": "ANTONIO",
     "appaterno": "FUENTES",
     "apmaterno": "POBLETE"
   }

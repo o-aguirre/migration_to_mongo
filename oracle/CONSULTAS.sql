@@ -17,4 +17,4 @@ JOIN
     EDIFICIO e ON gc.id_edif = e.id_edif
 WHERE
     e.nombre_edif = 'Murano'
-    AND gc.monto_total_gc > 100000;
+    AND gc.monto_total_gc > 85000;
