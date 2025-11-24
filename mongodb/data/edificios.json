@@ -14,7 +14,7 @@
         "total_banos": 3,
         "total_dormitorios": 4,
         "total_balcones": 3,
-        "metros_cuadrados": 400,
+        "metros_cuadrados": 400.00,
         "porc_prorrateo": 4.15
       },
       {
@@ -22,7 +22,7 @@
         "total_banos": 1,
         "total_dormitorios": 1,
         "total_balcones": 2,
-        "metros_cuadrados": 80,
+        "metros_cuadrados": 80.00,
         "porc_prorrateo": 0.95
       },
       {
@@ -30,7 +30,7 @@
         "total_banos": 2,
         "total_dormitorios": 3,
         "total_balcones": 2,
-        "metros_cuadrados": 200,
+        "metros_cuadrados": 200.00,
         "porc_prorrateo": 2.15
       },
       {
@@ -38,16 +38,16 @@
         "total_banos": 3,
         "total_dormitorios": 4,
         "total_balcones": 3,
-        "metros_cuadrados": 400,
+        "metros_cuadrados": 400.00,
         "porc_prorrateo": 4.15
       },
       {
         "nro_depto": 32,
-        "total_banos": 1,
-        "total_dormitorios": 1,
-        "total_balcones": 2,
-        "metros_cuadrados": 80,
-        "porc_prorrateo": 0.95
+        "total_banos": 3,
+        "total_dormitorios": 4,
+        "total_balcones": 3,
+        "metros_cuadrados": 330.00,
+        "porc_prorrateo": 3.45
       }
     ]
   },
@@ -60,7 +60,24 @@
       "nombre": "Las Condes",
       "id_comuna_sql": 10
     },
-    "departamentos": []
+    "departamentos": [
+      {
+        "nro_depto": 101,
+        "total_banos": 2,
+        "total_dormitorios": 3,
+        "total_balcones": 1,
+        "metros_cuadrados": 150.00,
+        "porc_prorrateo": 2.80
+      },
+      {
+        "nro_depto": 102,
+        "total_banos": 2,
+        "total_dormitorios": 3,
+        "total_balcones": 1,
+        "metros_cuadrados": 150.00,
+        "porc_prorrateo": 2.80
+      }
+    ]
   },
   {
     "id_edificio_sql": 30,
@@ -71,7 +88,16 @@
       "nombre": "Providencia",
       "id_comuna_sql": 20
     },
-    "departamentos": []
+    "departamentos": [
+      {
+        "nro_depto": 201,
+        "total_banos": 1,
+        "total_dormitorios": 2,
+        "total_balcones": 1,
+        "metros_cuadrados": 90.00,
+        "porc_prorrateo": 2.50
+      }
+    ]
   },
   {
     "id_edificio_sql": 40,
@@ -82,7 +108,16 @@
       "nombre": "Providencia",
       "id_comuna_sql": 20
     },
-    "departamentos": []
+    "departamentos": [
+      {
+        "nro_depto": 301,
+        "total_banos": 2,
+        "total_dormitorios": 3,
+        "total_balcones": 2,
+        "metros_cuadrados": 180.00,
+        "porc_prorrateo": 3.20
+      }
+    ]
   },
   {
     "id_edificio_sql": 50,
@@ -93,6 +128,15 @@
       "nombre": "Santiago",
       "id_comuna_sql": 230
     },
-    "departamentos": []
+    "departamentos": [
+      {
+        "nro_depto": 401,
+        "total_banos": 1,
+        "total_dormitorios": 1,
+        "total_balcones": 0,
+        "metros_cuadrados": 45.00,
+        "porc_prorrateo": 1.50
+      }
+    ]
   }
 ]

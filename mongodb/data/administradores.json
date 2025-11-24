@@ -4,39 +4,39 @@
     "dvrun": "9",
     "pnombre": "JUAN",
     "snombre": "JORGE",
-    "appaterno": "PEREZ",
-    "apmaterno": "GOMEZ"
+    "appaterno": "PÉREZ",
+    "apmaterno": "GÓMEZ"
   },
   {
     "numrun": 21817386,
-    "dvrun": "1",
-    "pnombre": "MARIA",
-    "snombre": "IGNACIA",
-    "appaterno": "ALVAREZ",
-    "apmaterno": "HENRIQUEZ"
+    "dvrun": "3",
+    "pnombre": "MARÍA",
+    "snombre": "TERESA",
+    "appaterno": "GONZÁLEZ",
+    "apmaterno": "SILVA"
   },
   {
     "numrun": 15018444,
-    "dvrun": "4",
-    "pnombre": "FELIPE",
-    "snombre": "JOSE",
-    "appaterno": "CONTRERAS",
-    "apmaterno": "MARAMBIO"
+    "dvrun": "5",
+    "pnombre": "CARLOS",
+    "snombre": null,
+    "appaterno": "ROJAS",
+    "apmaterno": "MUÑOZ"
   },
   {
     "numrun": 17702522,
-    "dvrun": "4",
-    "pnombre": "EUGENIA",
-    "snombre": "PAULA",
-    "appaterno": "BENAVIDES",
-    "apmaterno": "LOPEZ"
+    "dvrun": "7",
+    "pnombre": "ANA",
+    "snombre": "PATRICIA",
+    "appaterno": "FERNÁNDEZ",
+    "apmaterno": "LAGOS"
   },
   {
     "numrun": 13254987,
     "dvrun": "K",
-    "pnombre": "JUAN",
-    "snombre": "ANTONIO",
-    "appaterno": "FUENTES",
-    "apmaterno": "POBLETE"
+    "pnombre": "LUIS",
+    "snombre": null,
+    "appaterno": "MARTÍNEZ",
+    "apmaterno": "CASTRO"
   }
 ]
