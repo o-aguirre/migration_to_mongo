@@ -1,7 +1,5 @@
 # Sistema de Gestión de Edificios y Gastos Comunes
 
-## 📋 Descripción del Proyecto
-
 Sistema de gestión para administración de edificios, departamentos y gastos comunes, implementado con bases de datos **Oracle (modelo relacional)** y **MongoDB (modelo de documentos)**, demostrando la migración y equivalencia entre ambos paradigmas.
 
 ---
@@ -20,10 +18,10 @@ Sistema de gestión para administración de edificios, departamentos y gastos co
 
 ## 📦 Instalación
 
-### **1. Clonar o Descargar el Proyecto**
+### **1. Clonar el Proyecto**
 
 ```bash
-cd workspace
+git clone https://github.com/o-aguirre/migration_to_mongo.git
 ```
 
 ### **2. Instalar Dependencias de Node.js**
